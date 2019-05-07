@@ -1,0 +1,68 @@
+{
+    "title": "SentencePiece APIs (wikipedia)",
+    "description": "SentencePiece tokenizer (wikipedia).<BR />[Endpoint] https://api.apitore.com/api/37",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/apitore.com/sentencepieceApis_wikipedia_/0.0.3/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.apitore.com/api/37",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "getUsingGET_1": {
+            "main": "./lib/actions/getUsingGET_1.js",
+            "title": "SentencePiece (bpe)",
+            "description": "SentencePiece (bpe).<BR />Response<BR />&nbsp; Github: <a href=\"https://github.com/keigohtr/apitore-response-parent/tree/master/sentencepiece-response\">sentencepiece-response</a><BR />&nbsp; Class: com.apitore.banana.response.com.atilika.sentencepiece.SentencePieceTokenResponseEntity<BR />",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUsingGET_1.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getUsingGET_2": {
+            "main": "./lib/actions/getUsingGET_2.js",
+            "title": "SentencePiece (unigram)",
+            "description": "SentencePiece (unigram).<BR />Response<BR />&nbsp; Github: <a href=\"https://github.com/keigohtr/apitore-response-parent/tree/master/sentencepiece-response\">sentencepiece-response</a><BR />&nbsp; Class: com.apitore.banana.response.com.atilika.sentencepiece.SentencePieceTokenResponseEntity<BR />",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUsingGET_2.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
